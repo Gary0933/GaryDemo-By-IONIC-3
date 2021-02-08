@@ -1,0 +1,7 @@
+{
+  "name": "GaryTool",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

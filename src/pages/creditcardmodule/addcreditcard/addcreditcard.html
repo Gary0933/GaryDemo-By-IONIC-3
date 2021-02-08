@@ -1,0 +1,48 @@
+<!--
+  Generated template for the AddcreditcardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>addcreditcard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background:rgba(194, 207, 207, 0.719);">
+  <ion-card>
+    <ion-card-header>
+      <h2>Please fill in your credicard info</h2>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Bank Name : </ion-label>
+          <ion-select [selectOptions]="bankListTitle" [(ngModel)]="selectedBankName">
+            <ion-option value="{{i.name}}" *ngFor="let i of bankList">{{i.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Card Name : </ion-label>
+          <ion-input type="text" [(ngModel)]="editCardName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Card Number : </ion-label>
+          <ion-input type="text" [(ngModel)]="editCardNum"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Annual Fee Condition : </ion-label>
+          <ion-input type="text" [(ngModel)]="editAFCondition"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Annual Fee Status : </ion-label>
+          <ion-toggle checked="false" [(ngModel)]="AFDone" ></ion-toggle>
+        </ion-item>
+      </ion-list>
+      <button ion-button full [disabled]="submitFlag" (click)="submitCreditCardInfo()">submit</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
