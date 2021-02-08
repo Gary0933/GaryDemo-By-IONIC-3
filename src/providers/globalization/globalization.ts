@@ -23,17 +23,38 @@ export class GlobalizationProvider {
   }
 
   public setTranslationEnvironment() {
-    let defaultLauguage = 'en';
-    if (this.commonService.isCordova()) {
-      this.globalization.getPreferredLanguage().then((res) => {
-        defaultLauguage = res.value;
+
+    let defaultLanguage = 'en';
+    return this.getDeviceLanguage() .then((res) => { // language code like 'zh-CN', 'ko-KR'
+      let languageSplitArray = res.value.toLowerCase().split('-');
+      let mainLanguageCode = languageSplitArray[0];
+      let subLanguageCode = languageSplitArray[languageSplitArray.length - 1];
+
+      let setLanguageCode = mainLanguageCode;
+
+      // 如果一个国家需要多种语言，需要使用主码和次码组合
+      if (mainLanguageCode = 'zh') {
+        if (subLanguageCode == 'tw') {
+          setLanguageCode = 'zh-tw';
+        } 
+      }
+
+      this.translate.setDefaultLang(setLanguageCode);
+      return Promise.resolve();
+    }).catch((e) => {
+      console.log(e);
+      this.translate.setDefaultLang(defaultLanguage);
+    });
+  }
+
+  private getDeviceLanguage(): Promise<{ value: string }> {
+    if (this.commonService.isCordova()) { // 真机运行的情况
+      return this.globalization.getPreferredLanguage();
+    } else { // 浏览器运行的情况
+      return Promise.resolve({
+        value: navigator.language,
       });
-    } else {
-      defaultLauguage = navigator.language;
     }
-    //let defaultLauguageArray = defaultLauguage.toLowerCase().split('-');
-    //return defaultLauguageArray[0];
-    return defaultLauguage;
   }
 
 }

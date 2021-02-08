@@ -6,7 +6,7 @@ import { CommonProvider } from '../providers/common/common';
 import * as global from '../common/agentconstans';
 
 import { DbmanagerProvider } from '../providers/dbmanager/dbmanager' //数据库操作服务
-import { TranslateService } from '@ngx-translate/core';
+import { GlobalizationProvider } from '../providers/globalization/globalization';
 
 import { ListPage } from '../pages/list/list';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -29,15 +29,10 @@ export class MyApp {
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen, 
     public dbManager: DbmanagerProvider,
-    public translate: TranslateService,
+    public setTranslateLanguage: GlobalizationProvider,
     public commonService: CommonProvider
   ) {
     this.initializeApp();
-
-    // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('en');
 
     // menu页面显示的list
     this.pages = [
@@ -49,16 +44,19 @@ export class MyApp {
   }
 
   initializeApp() {
-    
-    global.AppStatus.isCordovaFlag = this.commonService.isCordova(); // 判断是不是真机运行，不能放在platform.ready()之后运行，因为要在页面加载之前运行
 
-    this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+    this.setTranslateLanguage.setTranslationEnvironment().then(() => {// 设置当前app的多语言翻译
+
+      global.AppStatus.isCordovaFlag = this.commonService.isCordova(); // 判断是不是真机运行，不能放在platform.ready()之后运行，因为要在页面加载之前运行
+
+      this.platform.ready().then(() => {
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
       
-      this.dbManager.connectDB();
+        this.dbManager.connectDB();
+      });
     });
   }
 

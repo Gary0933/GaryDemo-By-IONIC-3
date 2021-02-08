@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DbmanagerProvider } from '../../providers/dbmanager/dbmanager';
-import { GlobalizationProvider } from '../../providers/globalization/globalization'
+import { GlobalizationProvider } from '../../providers/globalization/globalization';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +9,11 @@ import { GlobalizationProvider } from '../../providers/globalization/globalizati
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public dbManager: DbmanagerProvider, public test: GlobalizationProvider) {}
+  constructor(
+    public navCtrl: NavController, 
+    public dbManager: DbmanagerProvider, 
+    public test: GlobalizationProvider
+  ) {}
 
   downloadDB() {
     this.dbManager.exportDB();
@@ -35,10 +39,6 @@ export class HomePage {
 
   clearDbLocalStorage() {
     localStorage.removeItem("database");
-  }
-
-  getLocalLanguage() {
-    alert(this.test.setTranslationEnvironment());
   }
 
 }
