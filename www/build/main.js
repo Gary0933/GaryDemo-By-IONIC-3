@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 102:
+/***/ 125:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,16 +14,16 @@ var AppStatus = {
 
 /***/ }),
 
-/***/ 103:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalizationProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_globalization__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_common__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_globalization__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_common__ = __webpack_require__(135);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -97,14 +97,14 @@ var GlobalizationProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommonProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -149,14 +149,14 @@ var CommonProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 134:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddcreditcardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -247,16 +247,16 @@ var AddcreditcardPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 135:
+/***/ 176:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreditcardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcreditcard_addcreditcard__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dbmanager_dbmanager__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__editcreditcard_editcreditcard__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcreditcard_addcreditcard__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dbmanager_dbmanager__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__editcreditcard_editcreditcard__ = __webpack_require__(177);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -358,14 +358,14 @@ var CreditcardPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 136:
+/***/ 177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditcreditcardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -476,14 +476,14 @@ var EditcreditcardPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 137:
+/***/ 178:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(234);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -526,7 +526,7 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 147:
+/***/ 188:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -539,28 +539,28 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 147;
+webpackEmptyAsyncContext.id = 188;
 
 /***/ }),
 
-/***/ 190:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/creditcardmodule/addcreditcard/addcreditcard.module": [
-		416,
+		574,
 		3
 	],
 	"../pages/creditcardmodule/creditcard/creditcard.module": [
-		417,
+		575,
 		2
 	],
 	"../pages/creditcardmodule/editcreditcard/editcreditcard.module": [
-		418,
+		576,
 		1
 	],
 	"../pages/tabs/tabs.module": [
-		419,
+		577,
 		0
 	]
 };
@@ -575,20 +575,21 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 190;
+webpackAsyncContext.id = 231;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 192:
+/***/ 234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__ = __webpack_require__(253);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -602,11 +603,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, dbManager, test) {
+    function HomePage(navCtrl, dbManager, test, datePicker) {
         this.navCtrl = navCtrl;
         this.dbManager = dbManager;
         this.test = test;
+        this.datePicker = datePicker;
+        this.event = {
+            month: '1990-02-19',
+            timeStarts: '07:43',
+            timeEnds: '1990-02-20'
+        };
     }
     HomePage.prototype.downloadDB = function () {
         this.dbManager.exportDB();
@@ -629,13 +637,36 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.clearDbLocalStorage = function () {
         localStorage.removeItem("database");
     };
+    HomePage.prototype.getDate = function () {
+        var _this = this;
+        var options = {
+            date: new Date(),
+            mode: 'datetime',
+            titleText: '请选择日期',
+            okText: '选择',
+            cancelText: '取消',
+            todayText: '今天',
+            nowText: '现在',
+            is24Hour: true,
+            allowOldDates: true,
+            doneButtonLabel: '确定',
+            minuteInterval: 10,
+            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
+        };
+        this.datePicker.show(options).then(function (date) {
+            var time = new Date(date.getTime() + 8 * 60 * 60 * 1000).toISOString();
+            _this.tDate = String(time.substring(0, time.length - 5)).replace('T', ' ');
+            //格式时间显示样式
+        }, function (err) { return console.log('Error occurred while getting date: ', err); });
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button danger (click)="downloadDB()" >export DB</button>\n  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n</ion-content>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button danger (click)="downloadDB()" >export DB</button>\n  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n\n  <ion-item>\n    <ion-label>日期</ion-label>\n    <ion-input disabled=true type="text" [(ngModel)]="tDate" text-right (click)="getDate()"></ion-input>\n  </ion-item>\n\n  <ion-list>\n    <ion-item>\n      <ion-label>Start Date</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Start Time</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Ends</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<style>\n  ion-list:first-child {\n    margin-top: 32px;\n  }\n\n  ion-list + ion-list {\n    margin-top: 0;\n  }\n</style>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */]])
+            __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__["a" /* DatePicker */]])
     ], HomePage);
     return HomePage;
 }());
@@ -644,13 +675,13 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 252:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -701,13 +732,13 @@ var ListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 253:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(344);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -715,33 +746,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 261:
+/***/ 344:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_common_common__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_sqlite__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_mocks_sqlite_mock__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_http_loader__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_home_home__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_list_list__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_common_common__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_sqlite__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_mocks_sqlite_mock__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_http_loader__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_home__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_list_list__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(177);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -765,6 +797,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // 获取设备语言 requirment
  // 指定版本4.XX.X
  // 自定应调用的service
+// 时间日期控件
+
 
 
 
@@ -782,17 +816,17 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/creditcardmodule/addcreditcard/addcreditcard.module#AddcreditcardPageModule', name: 'AddcreditcardPage', segment: 'addcreditcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/creditcardmodule/creditcard/creditcard.module#CreditcardPageModule', name: 'CreditcardPage', segment: 'creditcard', priority: 'low', defaultHistory: [] },
@@ -811,13 +845,13 @@ var AppModule = /** @class */ (function () {
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
@@ -827,7 +861,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__["a" /* Globalization */],
                 __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__["a" /* GlobalizationProvider */],
-                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */]
+                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */],
+                __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker__["a" /* DatePicker */]
             ]
         })
     ], AppModule);
@@ -838,22 +873,22 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = sqliteFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_sqlite__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_agentconstans__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_sqlite__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_agentconstans__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sql_js__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sql_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_sql_js__);
 
  //自定义的一个常量，便于以后调用
 
 // 此文件运行在app.component.ts之前
 function sqliteFactory() {
-    // 判断SQLite是否是在真机上运行，如果是在真机上就使用默认插件，如果是浏览器就使用自定义的mock
-    if (new __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */]().is('cordova')) {
-        return new __WEBPACK_IMPORTED_MODULE_0__ionic_native_sqlite__["a" /* SQLite */]();
+    if (false) {
+        return new SQLite();
     }
     else {
         return new SQLiteMock();
@@ -862,21 +897,24 @@ function sqliteFactory() {
 var SQLiteMock = /** @class */ (function () {
     function SQLiteMock() {
     }
-    SQLiteMock.prototype.create = function (config) {
-        var db;
-        console.log(config);
-        //如果缓存里有保存的db数据，根据已存在的数据创建db
-        var storedDb = localStorage.getItem("database");
-        if (storedDb) {
-            var arr = storedDb.split(',');
-            db = new SQL.Database(arr);
-        }
-        else {
-            db = new SQL.Database();
-        }
-        __WEBPACK_IMPORTED_MODULE_1__common_agentconstans__["b" /* SQLObj */].db = db;
-        return new Promise(function (resolve) {
-            resolve(new SQLiteObject(db));
+    SQLiteMock.prototype.create = function (_config) {
+        var config = {
+            locateFile: function (_filename) { return 'assets/sql-wasm.wasm'; }
+        };
+        return __WEBPACK_IMPORTED_MODULE_2_sql_js__(config).then(function (SQL) {
+            // save db data to local storage when running on brower
+            var storedDb = localStorage.getItem('database');
+            if (storedDb) {
+                var db;
+                var arr;
+                arr = storedDb.split(',');
+                db = new SQL.Database(arr);
+            }
+            else {
+                db = new SQL.Database();
+            }
+            __WEBPACK_IMPORTED_MODULE_1__common_agentconstans__["b" /* SQLObj */].db = db;
+            return (new SQLiteObject(db));
         });
     };
     return SQLiteMock;
@@ -890,10 +928,17 @@ var SQLiteObject = /** @class */ (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             try {
-                var st = _this._objectInstance.prepare(statement, params);
+                if (params && params.length) {
+                    for (var i = 0; i < params.length; i++) {
+                        if (params[i] === undefined) {
+                            params[i] = "";
+                        }
+                    }
+                }
+                var stmt = _this._objectInstance.prepare(statement, params);
                 var rows = [];
-                while (st.step()) {
-                    var row = st.getAsObject();
+                while (stmt.step()) {
+                    var row = stmt.getAsObject();
                     rows.push(row);
                 }
                 var payload = {
@@ -904,11 +949,11 @@ var SQLiteObject = /** @class */ (function () {
                         length: rows.length
                     },
                     rowsAffected: _this._objectInstance.getRowsModified() || 0,
-                    insertId: _this._objectInstance.insertId || void 0
+                    raw: rows
                 };
-                //如果是浏览器测试的话，每次db操作后都将db数据保存在缓存里，防止每次重启app，db数据都丢失
+                // prevent db data missing on brower when freshing the page
                 var arr = _this._objectInstance.export();
-                localStorage.setItem("database", String(arr));
+                localStorage.setItem('database', String(arr));
                 resolve(payload);
             }
             catch (e) {
@@ -923,106 +968,42 @@ var SQLiteObject = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 415:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 496:
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_common_common__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_agentconstans__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dbmanager_dbmanager__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_globalization_globalization__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(135);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
- //数据库操作服务
-
-
-
-
-var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, dbManager, setTranslateLanguage, commonService) {
-        this.platform = platform;
-        this.statusBar = statusBar;
-        this.splashScreen = splashScreen;
-        this.dbManager = dbManager;
-        this.setTranslateLanguage = setTranslateLanguage;
-        this.commonService = commonService;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */]; // APP初始显示的页面
-        this.initializeApp();
-        // menu页面显示的list
-        this.pages = [
-            { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */] },
-            { title: 'Credit Card', icon: 'card', component: __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */] },
-            { title: 'List', icon: 'heart', component: __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */] }
-        ];
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.setTranslateLanguage.setTranslationEnvironment().then(function () {
-            __WEBPACK_IMPORTED_MODULE_5__common_agentconstans__["a" /* AppStatus */].isCordovaFlag = _this.commonService.isCordova(); // 判断是不是真机运行，不能放在platform.ready()之后运行，因为要在页面加载之前运行
-            _this.platform.ready().then(function () {
-                // Okay, so the platform is ready and our plugins are available.
-                // Here you can do any higher level native things you might need.
-                _this.statusBar.styleDefault();
-                _this.splashScreen.hide();
-                _this.dbManager.connectDB();
-            });
-        });
-    };
-    MyApp.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
-    ], MyApp.prototype, "nav", void 0);
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\app\app.html"*/'<ion-menu [content]="content" type="overlay">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button class="selected" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icon}}" item-start></ion-icon>\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\app\app.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_globalization_globalization__["a" /* GlobalizationProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_common_common__["a" /* CommonProvider */]])
-    ], MyApp);
-    return MyApp;
-}());
-
-//# sourceMappingURL=app.component.js.map
+/* (ignored) */
 
 /***/ }),
 
-/***/ 44:
+/***/ 498:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 531:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 532:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(Buffer) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DbmanagerProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_sqlite__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_agentconstans__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_sqlite__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_agentconstans__ = __webpack_require__(125);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1241,9 +1222,101 @@ var DbmanagerProvider = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=dbmanager.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(283).Buffer))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(23).Buffer))
+
+/***/ }),
+
+/***/ 573:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_common_common__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_agentconstans__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dbmanager_dbmanager__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_globalization_globalization__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(176);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+ //数据库操作服务
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen, dbManager, setTranslateLanguage, commonService) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.dbManager = dbManager;
+        this.setTranslateLanguage = setTranslateLanguage;
+        this.commonService = commonService;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */]; // APP初始显示的页面
+        this.initializeApp();
+        // menu页面显示的list
+        this.pages = [
+            { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */] },
+            { title: 'Credit Card', icon: 'card', component: __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */] },
+            { title: 'List', icon: 'heart', component: __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */] }
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.setTranslateLanguage.setTranslationEnvironment().then(function () {
+            __WEBPACK_IMPORTED_MODULE_5__common_agentconstans__["a" /* AppStatus */].isCordovaFlag = _this.commonService.isCordova(); // 判断是不是真机运行，不能放在platform.ready()之后运行，因为要在页面加载之前运行
+            _this.platform.ready().then(function () {
+                // Okay, so the platform is ready and our plugins are available.
+                // Here you can do any higher level native things you might need.
+                _this.statusBar.styleDefault();
+                _this.splashScreen.hide();
+                _this.dbManager.connectDB();
+            });
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\app\app.html"*/'<ion-menu [content]="content" type="overlay">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button class="selected" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icon}}" item-start></ion-icon>\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_globalization_globalization__["a" /* GlobalizationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_common_common__["a" /* CommonProvider */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
 
 /***/ })
 
-},[253]);
+},[336]);
 //# sourceMappingURL=main.js.map

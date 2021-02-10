@@ -17,7 +17,10 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 
 // 获取设备语言 requirment
 import { Globalization } from '@ionic-native/globalization'; // 指定版本4.XX.X
-import { GlobalizationProvider } from "../providers/globalization/globalization"; // 自定应调用的service
+import { GlobalizationProvider } from '../providers/globalization/globalization'; // 自定应调用的service
+
+// 时间日期控件
+import { DatePicker } from '@ionic-native/date-picker';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -76,7 +79,8 @@ export function createTranslateLoader(http: HttpClient) {
     DbmanagerProvider,
     Globalization,
     GlobalizationProvider,
-    CommonProvider
+    CommonProvider,
+    DatePicker
   ]
 })
 

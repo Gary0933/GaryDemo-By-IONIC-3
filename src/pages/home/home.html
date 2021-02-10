@@ -17,4 +17,37 @@
 
   <button ion-button danger (click)="downloadDB()" >export DB</button>
   <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>
+
+  <ion-item>
+    <ion-label>日期</ion-label>
+    <ion-input disabled=true type="text" [(ngModel)]="tDate" text-right (click)="getDate()"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ends</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

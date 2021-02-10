@@ -11,7 +11,11 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl":"./src", // 设置识别登录环境配置
+    "paths":{
+      "@env/environment":["environments/environment.prod"] // 设置识别登录环境配置
+    }
   },
   "include": [
     "src/**/*.ts"
