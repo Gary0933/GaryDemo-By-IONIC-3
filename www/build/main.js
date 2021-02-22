@@ -905,7 +905,7 @@ var SQLiteMock = /** @class */ (function () {
         };
         return __WEBPACK_IMPORTED_MODULE_2_sql_js__(config).then(function (SQL) {
             // save db data to local storage when running on brower
-            var storedDb = localStorage.getItem('database');
+            var storedDb = localStorage.getItem('gary_tool_database');
             var db;
             if (storedDb) {
                 var arr;
@@ -954,8 +954,8 @@ var SQLiteObject = /** @class */ (function () {
                     raw: rows
                 };
                 // prevent db data missing on brower when freshing the page
-                //var db_arr: ArrayBuffer = this._objectInstance.export();
-                //localStorage.setItem('database', String(db_arr));
+                var db_arr = _this._objectInstance.export();
+                localStorage.setItem('gary_tool_database', String(db_arr));
                 resolve(payload);
             }
             catch (e) {
