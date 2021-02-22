@@ -548,19 +548,19 @@ webpackEmptyAsyncContext.id = 188;
 
 var map = {
 	"../pages/creditcardmodule/addcreditcard/addcreditcard.module": [
-		574,
+		575,
 		3
 	],
 	"../pages/creditcardmodule/creditcard/creditcard.module": [
-		575,
+		576,
 		2
 	],
 	"../pages/creditcardmodule/editcreditcard/editcreditcard.module": [
-		576,
+		577,
 		1
 	],
 	"../pages/tabs/tabs.module": [
-		577,
+		578,
 		0
 	]
 };
@@ -762,12 +762,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_mocks_sqlite_mock__ = __webpack_require__(492);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_http_loader__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_http_loader__ = __webpack_require__(571);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(574);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_home__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_list_list__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__ = __webpack_require__(178);
@@ -882,13 +882,15 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_agentconstans__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sql_js__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_sql_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_sql_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__env_environment__ = __webpack_require__(570);
 
  //自定义的一个常量，便于以后调用
 
+
 // 此文件运行在app.component.ts之前
 function sqliteFactory() {
-    if (false) {
-        return new SQLite();
+    if (__WEBPACK_IMPORTED_MODULE_3__env_environment__["a" /* ENV */].cordova_dependence) {
+        return new __WEBPACK_IMPORTED_MODULE_0__ionic_native_sqlite__["a" /* SQLite */]();
     }
     else {
         return new SQLiteMock();
@@ -904,8 +906,8 @@ var SQLiteMock = /** @class */ (function () {
         return __WEBPACK_IMPORTED_MODULE_2_sql_js__(config).then(function (SQL) {
             // save db data to local storage when running on brower
             var storedDb = localStorage.getItem('database');
+            var db;
             if (storedDb) {
-                var db;
                 var arr;
                 arr = storedDb.split(',');
                 db = new SQL.Database(arr);
@@ -952,8 +954,8 @@ var SQLiteObject = /** @class */ (function () {
                     raw: rows
                 };
                 // prevent db data missing on brower when freshing the page
-                var arr = _this._objectInstance.export();
-                localStorage.setItem('database', String(arr));
+                //var db_arr: ArrayBuffer = this._objectInstance.export();
+                //localStorage.setItem('database', String(db_arr));
                 resolve(payload);
             }
             catch (e) {
@@ -1226,7 +1228,34 @@ var DbmanagerProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 573:
+/***/ 570:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ENV; });
+/**
+ *Browser Environemnt files is not supported for all node veersions. If not work, please use dev/prod config files.
+ */
+//Please do not commit this files unless add new values. Only modify on your local computer.
+var ENV = /** @class */ (function () {
+    function ENV() {
+    }
+    /*this config files will be read when you do normal development: E.g ionic cordova build android/ios --prod, npm run ionic:build --prod
+      1, if you want to run in browser, you can make cordova_dependence false to load mock plugin.
+      2, if you want to package a debug native package, please make it true to load native plugin.
+      3, the browser cofig will be applied when you run ionic serve
+    */
+    ENV.cordova_dependence = false;
+    ENV.vconsole = false;
+    ENV.console_overwrite = false;
+    return ENV;
+}());
+
+//# sourceMappingURL=environment.browser.js.map
+
+/***/ }),
+
+/***/ 574:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -6,7 +6,7 @@ import { ENV } from "@env/environment";
 
 // 此文件运行在app.component.ts之前
 export function sqliteFactory(){
-  if (false) {
+  if (ENV.cordova_dependence) {
     return new SQLite();
   }else {
     return new SQLiteMock();
@@ -24,8 +24,8 @@ class SQLiteMock {
 
       // save db data to local storage when running on brower
       var storedDb = localStorage.getItem('database');
+      var db;
       if (storedDb) {
-        var db;
         var arr; 
         arr = storedDb.split(',');
         db = new SQL.Database(arr);
@@ -76,8 +76,8 @@ class SQLiteObject {
         };
 
         // prevent db data missing on brower when freshing the page
-        var arr: ArrayBuffer = this._objectInstance.export();
-        localStorage.setItem('database', String(arr));
+        //var db_arr: ArrayBuffer = this._objectInstance.export();
+        //localStorage.setItem('database', String(db_arr));
 
         resolve(payload);
       } catch (e) {
