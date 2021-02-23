@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DbmanagerProvider } from '../../providers/dbmanager/dbmanager';
 import { GlobalizationProvider } from '../../providers/globalization/globalization';
-import { DatePicker, DatePickerOptions } from '@ionic-native/date-picker';
+
 
 @Component({
   selector: 'page-home',
@@ -20,9 +20,9 @@ export class HomePage {
   constructor(
     public navCtrl: NavController, 
     public dbManager: DbmanagerProvider, 
-    public test: GlobalizationProvider,
-    private datePicker: DatePicker
+    public test: GlobalizationProvider
   ) {}
+  
 
   downloadDB() {
     this.dbManager.exportDB();
@@ -50,29 +50,5 @@ export class HomePage {
     localStorage.removeItem("database");
   }
 
-  getDate() {
-    let options : DatePickerOptions = {
-      date: new Date(),
-      mode: 'datetime',
-      titleText:'请选择日期',
-      okText:'选择',
-      cancelText: '取消',
-      todayText:'今天',
-      nowText: '现在',
-      is24Hour:true,
-      allowOldDates:true,
-      doneButtonLabel:'确定',
-      minuteInterval:10,
-      androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK 
-    }
-    this.datePicker.show(options).then(
-      date => {
-        let time = new Date(date.getTime() + 8 * 60 * 60 * 1000).toISOString();
-        this.tDate = String(time.substring(0, time.length - 5)).replace('T', ' ')
-        //格式时间显示样式
-      },
-      err => console.log('Error occurred while getting date: ', err)
-    );
-  }
 
 }

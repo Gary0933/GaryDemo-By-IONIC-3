@@ -153,108 +153,10 @@ var CommonProvider = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddcreditcardPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the AddcreditcardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AddcreditcardPage = /** @class */ (function () {
-    function AddcreditcardPage(navCtrl, navParams, dbManager, events, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.dbManager = dbManager;
-        this.events = events;
-        this.toastCtrl = toastCtrl;
-        this.bankListTitle = {
-            title: 'Please select',
-        };
-        this.bankList = [
-            { name: "Gong Shang Bank" },
-            { name: "Jiao Tong Bank" },
-            { name: "Zhao Shang Bank" },
-            { name: "Min Sheng Bank" }
-        ];
-        this.selectedBankName = '';
-        this.editCardName = '';
-        this.editCardNum = '';
-        this.editAFCondition = '';
-        this.AFDone = false;
-        this.submitFlag = false;
-        this.submitFlag = false;
-    }
-    AddcreditcardPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddcreditcardPage');
-    };
-    AddcreditcardPage.prototype.submitCreditCardInfo = function () {
-        var thisArea = this;
-        if (this.selectedBankName == '' || this.editCardName == '' || this.editCardNum == '' || this.editAFCondition == '') {
-            alert("Please fill all item");
-        }
-        else {
-            var params = {
-                'BankName': this.selectedBankName,
-                'CardName': this.editCardName,
-                'CardNumber': this.editCardNum,
-                'AnnualFeeStatus': this.AFDone ? 1 : 0,
-                'AnnualFeeCondition': this.editAFCondition,
-            };
-            this.dbManager.insertTableInfo("CreditCardInfo", params).then(function (data) {
-                thisArea.submitFlag = true;
-                // 提交完数据，通过event来发布数据有更新的事件，这时候在展示数据的页面如果接收到这个事件，会更新数据
-                thisArea.events.publish("reloadCreditCardInfo");
-                //显示提交成功的提示
-                thisArea.toastCtrl.create({
-                    message: "SubmitSubmit Successfully",
-                    duration: 2000,
-                    position: "middle",
-                    cssClass: 'myToastStyle',
-                }).present();
-            });
-        }
-    };
-    AddcreditcardPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addcreditcard',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\creditcardmodule\addcreditcard\addcreditcard.html"*/'<!--\n  Generated template for the AddcreditcardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>addcreditcard</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <ion-card>\n    <ion-card-header>\n      <h2>Please fill in your credicard info</h2>\n    </ion-card-header>\n\n    <ion-card-content>\n      <ion-list>\n        <ion-item>\n          <ion-label>Bank Name : </ion-label>\n          <ion-select [selectOptions]="bankListTitle" [(ngModel)]="selectedBankName">\n            <ion-option value="{{i.name}}" *ngFor="let i of bankList">{{i.name}}</ion-option>\n          </ion-select>\n        </ion-item>\n  \n        <ion-item>\n          <ion-label>Card Name : </ion-label>\n          <ion-input type="text" [(ngModel)]="editCardName"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Card Number : </ion-label>\n          <ion-input type="text" [(ngModel)]="editCardNum"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Annual Fee Condition : </ion-label>\n          <ion-input type="text" [(ngModel)]="editAFCondition"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Annual Fee Status : </ion-label>\n          <ion-toggle checked="false" [(ngModel)]="AFDone" ></ion-toggle>\n        </ion-item>\n      </ion-list>\n      <button ion-button full [disabled]="submitFlag" (click)="submitCreditCardInfo()">submit</button>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\creditcardmodule\addcreditcard\addcreditcard.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
-    ], AddcreditcardPage);
-    return AddcreditcardPage;
-}());
-
-//# sourceMappingURL=addcreditcard.js.map
-
-/***/ }),
-
-/***/ 176:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreditcardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcreditcard_addcreditcard__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcreditcard_addcreditcard__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__editcreditcard_editcreditcard__ = __webpack_require__(177);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -355,6 +257,104 @@ var CreditcardPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=creditcard.js.map
+
+/***/ }),
+
+/***/ 176:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddcreditcardPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the AddcreditcardPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddcreditcardPage = /** @class */ (function () {
+    function AddcreditcardPage(navCtrl, navParams, dbManager, events, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.dbManager = dbManager;
+        this.events = events;
+        this.toastCtrl = toastCtrl;
+        this.bankListTitle = {
+            title: 'Please select',
+        };
+        this.bankList = [
+            { name: "Gong Shang Bank" },
+            { name: "Jiao Tong Bank" },
+            { name: "Zhao Shang Bank" },
+            { name: "Min Sheng Bank" }
+        ];
+        this.selectedBankName = '';
+        this.editCardName = '';
+        this.editCardNum = '';
+        this.editAFCondition = '';
+        this.AFDone = false;
+        this.submitFlag = false;
+        this.submitFlag = false;
+    }
+    AddcreditcardPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddcreditcardPage');
+    };
+    AddcreditcardPage.prototype.submitCreditCardInfo = function () {
+        var thisArea = this;
+        if (this.selectedBankName == '' || this.editCardName == '' || this.editCardNum == '' || this.editAFCondition == '') {
+            alert("Please fill all item");
+        }
+        else {
+            var params = {
+                'BankName': this.selectedBankName,
+                'CardName': this.editCardName,
+                'CardNumber': this.editCardNum,
+                'AnnualFeeStatus': this.AFDone ? 1 : 0,
+                'AnnualFeeCondition': this.editAFCondition,
+            };
+            this.dbManager.insertTableInfo("CreditCardInfo", params).then(function (data) {
+                thisArea.submitFlag = true;
+                // 提交完数据，通过event来发布数据有更新的事件，这时候在展示数据的页面如果接收到这个事件，会更新数据
+                thisArea.events.publish("reloadCreditCardInfo");
+                //显示提交成功的提示
+                thisArea.toastCtrl.create({
+                    message: "SubmitSubmit Successfully",
+                    duration: 2000,
+                    position: "middle",
+                    cssClass: 'myToastStyle',
+                }).present();
+            });
+        }
+    };
+    AddcreditcardPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-addcreditcard',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\creditcardmodule\addcreditcard\addcreditcard.html"*/'<!--\n  Generated template for the AddcreditcardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>addcreditcard</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <ion-card>\n    <ion-card-header>\n      <h2>Please fill in your credicard info</h2>\n    </ion-card-header>\n\n    <ion-card-content>\n      <ion-list>\n        <ion-item>\n          <ion-label>Bank Name : </ion-label>\n          <ion-select [selectOptions]="bankListTitle" [(ngModel)]="selectedBankName">\n            <ion-option value="{{i.name}}" *ngFor="let i of bankList">{{i.name}}</ion-option>\n          </ion-select>\n        </ion-item>\n  \n        <ion-item>\n          <ion-label>Card Name : </ion-label>\n          <ion-input type="text" [(ngModel)]="editCardName"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Card Number : </ion-label>\n          <ion-input type="text" [(ngModel)]="editCardNum"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Annual Fee Condition : </ion-label>\n          <ion-input type="text" [(ngModel)]="editAFCondition"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Annual Fee Status : </ion-label>\n          <ion-toggle checked="false" [(ngModel)]="AFDone" ></ion-toggle>\n        </ion-item>\n      </ion-list>\n      <button ion-button full [disabled]="submitFlag" (click)="submitCreditCardInfo()">submit</button>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\creditcardmodule\addcreditcard\addcreditcard.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
+    ], AddcreditcardPage);
+    return AddcreditcardPage;
+}());
+
+//# sourceMappingURL=addcreditcard.js.map
 
 /***/ }),
 
@@ -548,11 +548,11 @@ webpackEmptyAsyncContext.id = 188;
 
 var map = {
 	"../pages/creditcardmodule/addcreditcard/addcreditcard.module": [
-		575,
+		576,
 		3
 	],
 	"../pages/creditcardmodule/creditcard/creditcard.module": [
-		576,
+		575,
 		2
 	],
 	"../pages/creditcardmodule/editcreditcard/editcreditcard.module": [
@@ -589,7 +589,6 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__ = __webpack_require__(253);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -603,13 +602,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, dbManager, test, datePicker) {
+    function HomePage(navCtrl, dbManager, test) {
         this.navCtrl = navCtrl;
         this.dbManager = dbManager;
         this.test = test;
-        this.datePicker = datePicker;
         this.event = {
             month: '1990-02-19',
             timeStarts: '07:43',
@@ -637,38 +634,14 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.clearDbLocalStorage = function () {
         localStorage.removeItem("database");
     };
-    HomePage.prototype.getDate = function () {
-        var _this = this;
-        var options = {
-            date: new Date(),
-            mode: 'datetime',
-            titleText: '请选择日期',
-            okText: '选择',
-            cancelText: '取消',
-            todayText: '今天',
-            nowText: '现在',
-            is24Hour: true,
-            allowOldDates: true,
-            doneButtonLabel: '确定',
-            minuteInterval: 10,
-            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
-        };
-        this.datePicker.show(options).then(function (date) {
-            var time = new Date(date.getTime() + 8 * 60 * 60 * 1000).toISOString();
-            _this.tDate = String(time.substring(0, time.length - 5)).replace('T', ' ');
-            //格式时间显示样式
-        }, function (err) { return console.log('Error occurred while getting date: ', err); });
-    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button danger (click)="downloadDB()" >export DB</button>\n  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n\n  <ion-item>\n    <ion-label>日期</ion-label>\n    <ion-input disabled=true type="text" [(ngModel)]="tDate" text-right (click)="getDate()"></ion-input>\n  </ion-item>\n\n  <ion-list>\n    <ion-item>\n      <ion-label>Start Date</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Start Time</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Ends</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<style>\n  ion-list:first-child {\n    margin-top: 32px;\n  }\n\n  ion-list + ion-list {\n    margin-top: 0;\n  }\n</style>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button danger (click)="downloadDB()" >export DB</button>\n  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label>Start Date</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Start Time</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Ends</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<style>\n  ion-list:first-child {\n    margin-top: 32px;\n  }\n\n  ion-list + ion-list {\n    margin-top: 0;\n  }\n</style>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__["a" /* DatePicker */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -766,14 +739,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_home__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_list_list__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_home_home__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_list_list__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(177);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -797,8 +769,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // 获取设备语言 requirment
  // 指定版本4.XX.X
  // 自定应调用的service
-// 时间日期控件
-
 
 
 
@@ -816,20 +786,20 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/creditcardmodule/addcreditcard/addcreditcard.module#AddcreditcardPageModule', name: 'AddcreditcardPage', segment: 'addcreditcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/creditcardmodule/creditcard/creditcard.module#CreditcardPageModule', name: 'CreditcardPage', segment: 'creditcard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/creditcardmodule/addcreditcard/addcreditcard.module#AddcreditcardPageModule', name: 'AddcreditcardPage', segment: 'addcreditcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/creditcardmodule/editcreditcard/editcreditcard.module#EditcreditcardPageModule', name: 'EditcreditcardPage', segment: 'editcreditcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
@@ -845,13 +815,13 @@ var AppModule = /** @class */ (function () {
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
@@ -861,8 +831,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__["a" /* Globalization */],
                 __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__["a" /* GlobalizationProvider */],
-                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */],
-                __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker__["a" /* DatePicker */]
+                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */]
             ]
         })
     ], AppModule);
@@ -1270,7 +1239,7 @@ var ENV = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_globalization_globalization__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(175);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
