@@ -589,6 +589,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker_ngx__ = __webpack_require__(253);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -602,11 +603,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, dbManager, test) {
+    function HomePage(navCtrl, dbManager, test, datePicker) {
         this.navCtrl = navCtrl;
         this.dbManager = dbManager;
         this.test = test;
+        this.datePicker = datePicker;
         this.event = {
             month: '1990-02-19',
             timeStarts: '07:43',
@@ -634,14 +637,38 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.clearDbLocalStorage = function () {
         localStorage.removeItem("database");
     };
+    HomePage.prototype.getCalendar = function () {
+        var _this = this;
+        var options = {
+            date: new Date(),
+            mode: 'datetime',
+            titleText: '请选择日期',
+            okText: '选择',
+            cancelText: '取消',
+            todayText: '今天',
+            nowText: '现在',
+            is24Hour: true,
+            allowOldDates: true,
+            doneButtonLabel: '确定',
+            minuteInterval: 10,
+            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
+        };
+        this.datePicker.show(options).then(function (date) {
+            var time = new Date(date.getTime() + 8 * 60 * 60 * 1000).toISOString();
+            _this.tDate = String(time.substring(0, time.length - 5)).replace('T', ' ');
+            //格式时间显示样式
+        }, function (err) { return console.log('Error occurred while getting date: ', err); });
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button danger (click)="downloadDB()" >export DB</button>\n  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label>Start Date</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Start Time</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Ends</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<style>\n  ion-list:first-child {\n    margin-top: 32px;\n  }\n\n  ion-list + ion-list {\n    margin-top: 0;\n  }\n</style>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:rgba(194, 207, 207, 0.719);">\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <p>{{ \'test_key\' | translate }}</p>\n\n  <button ion-button (click)="downloadDB()" >export DB</button>\n  <button ion-button (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>\n  <button ion-button color="danger" (click)="getCalendar()">Calendar</button>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label>Start Date</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Start Time</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Ends</ion-label>\n      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<style>\n  ion-list:first-child {\n    margin-top: 32px;\n  }\n\n  ion-list + ion-list {\n    margin-top: 0;\n  }\n</style>\n'/*ion-inline-end:"E:\WorkSpace\Ionic\GaryTool_Git\GaryDemo-By-IONIC-3\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_globalization_globalization__["a" /* GlobalizationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker_ngx__["a" /* DatePicker */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -739,13 +766,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_home_home__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_list_list__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker_ngx__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_home__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_list_list__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__ = __webpack_require__(177);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -776,6 +804,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // use for translateloader
 function createTranslateLoader(http) {
     return new __WEBPACK_IMPORTED_MODULE_10__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, './assets/i18n/', '.json');
@@ -786,17 +815,17 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/creditcardmodule/creditcard/creditcard.module#CreditcardPageModule', name: 'CreditcardPage', segment: 'creditcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/creditcardmodule/addcreditcard/addcreditcard.module#AddcreditcardPageModule', name: 'AddcreditcardPage', segment: 'addcreditcard', priority: 'low', defaultHistory: [] },
@@ -815,13 +844,13 @@ var AppModule = /** @class */ (function () {
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_creditcardmodule_creditcard_creditcard__["a" /* CreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_creditcardmodule_addcreditcard_addcreditcard__["a" /* AddcreditcardPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_creditcardmodule_editcreditcard_editcreditcard__["a" /* EditcreditcardPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
@@ -831,7 +860,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__providers_dbmanager_dbmanager__["a" /* DbmanagerProvider */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_globalization__["a" /* Globalization */],
                 __WEBPACK_IMPORTED_MODULE_13__providers_globalization_globalization__["a" /* GlobalizationProvider */],
-                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */]
+                __WEBPACK_IMPORTED_MODULE_5__providers_common_common__["a" /* CommonProvider */],
+                __WEBPACK_IMPORTED_MODULE_14__ionic_native_date_picker_ngx__["a" /* DatePicker */]
             ]
         })
     ], AppModule);
@@ -1202,9 +1232,6 @@ var DbmanagerProvider = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ENV; });
-/**
- *Browser Environemnt files is not supported for all node veersions. If not work, please use dev/prod config files.
- */
 //Please do not commit this files unless add new values. Only modify on your local computer.
 var ENV = /** @class */ (function () {
     function ENV() {
@@ -1212,15 +1239,14 @@ var ENV = /** @class */ (function () {
     /*this config files will be read when you do normal development: E.g ionic cordova build android/ios --prod, npm run ionic:build --prod
       1, if you want to run in browser, you can make cordova_dependence false to load mock plugin.
       2, if you want to package a debug native package, please make it true to load native plugin.
-      3, the browser cofig will be applied when you run ionic serve
     */
-    ENV.cordova_dependence = false;
-    ENV.vconsole = false;
+    ENV.cordova_dependence = true;
+    ENV.vconsole = true;
     ENV.console_overwrite = false;
     return ENV;
 }());
 
-//# sourceMappingURL=environment.browser.js.map
+//# sourceMappingURL=environment.dev.js.map
 
 /***/ }),
 

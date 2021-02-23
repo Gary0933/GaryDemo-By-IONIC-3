@@ -15,8 +15,9 @@
   </p>
   <p>{{ 'test_key' | translate }}</p>
 
-  <button ion-button danger (click)="downloadDB()" >export DB</button>
-  <button ion-button danger (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>
+  <button ion-button (click)="downloadDB()" >export DB</button>
+  <button ion-button (click)="clearDbLocalStorage()" >Clear DB LocalStorage</button>
+  <button ion-button color="danger" (click)="getCalendar()">Calendar</button>
 
 
   <ion-list>
